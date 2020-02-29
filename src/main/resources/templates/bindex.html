@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>后台首页</title>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet"
+	th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css}"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{../static/css/bindex.css}">
+<script type="text/javascript" th:src="@{../static/js/jquery.min.js}"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script
+	th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js}"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<!--顶部导航栏部分-->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- 页面缩小时展现 -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#example-navbar-collapse">
+					<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<!-- <a class="navbar-brand" title="logoTitle" th:href="@{#}">logo<img
+					th:src="@{#}" height="100%" /></a> -->
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a class="icon-bar" th:href="@{#}">网站首页</a></li>
+					<li><a th:href="@{#}">敬请期待</a></li>
+					<li><a th:href="@{#}">敬请期待</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li role="presentation"><a th:href="@{#}">欢迎你：<span
+							class="badge">张童礼</span></a></li>
+					<li><a th:href="@{#}"> <span class="glyphicon glyphicon-lock"></span>退出登录
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2">
+				<ul class="nav nav-stacked nav-pills">
+					<li role="presentation" class="active"><a th:href="@{#}">首页</a></li>
+					<li role="presentation"><a th:href="@{battendance}">考勤管理</a></li>
+					<li role="presentation"><a th:href="@{#}">合同管理</a></li>
+					<li role="presentation"><a th:href="@{#}">个人薪酬</a></li>
+					<li role="presentation"><a th:href="@{#}">招聘信息</a></li>
+					<!-- 开始 -->
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" th:href="@{#}"> 个人设置<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a th:href="@{#}">修改密码</a></li>
+							<li><a th:href="@{#}">退出系统</a></li>
+							<li><a th:href="@{#}">查看个人信息</a></li>
+						</ul></li>
+					<!-- 结束 -->
+				</ul>
+			</div>
+
+			<div class="col-sm-10">
+				<div class="col-sm-7">
+					<div>
+						<h3>感谢您使用SSM企业人事管理系统</h3>
+						<p>提示:</p>
+						<p>您现在使用的是本小组开发的套用于企业人事管理的非专业系统 .如有问题请指教!</p>
+						<p>五大功能完美整合，一站通使用方式， 功能强大， 操作简单
+							,后台操作易如反掌,只需会开机，会使用鼠标，能认字,就能当HR !</p>
+						<p>赶快加入吧!</p>
+					</div>
+				</div>
+				<!-- 中部右侧右边 -->
+				<div class="col-sm-5">
+					<div>
+						<h4 style="color: red;">
+							<b>签到/签退</b>
+						</h4>
+						<p>经营理念:全心全意为品牌注入更多价值</p>
+						<p>服务理念:给我分机会还您百分满意</p>
+						<p>团队理念:热情专注高效负责</p>
+						<p>发展理念:致力与成为本土最有价值的广告服务商</p>
+						<p>人才观:以为本公司文化:以思缘为荣以思缘为家</p>
+						&nbsp;&nbsp;&nbsp; &nbsp;
+						<button class="btn btn-danger btn-lg" id="signin">签到</button>
+						<button class="btn btn-danger btn-lg" id="signout">签退</button>
+						<!-- <p id="result"></p> -->
+					</div>
+					<div>
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<h3 class="panel-title">公司公告</h3>
+							</div>
+							<div class="panel-body">
+								<ul class="list-group">
+									<li class="list-group-item">***</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- 底部页脚部分 -->
+	<div class="footer">
+		<p class="text-center">
+			Copyright &copy;
+			<!-- © -->
+			2020 [张童礼] Powered By [企业人士管理系统] Version 1.0.0
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		$(".nav li").click(function() {
+			$(".active").removeClass('active');
+			$(this).addClass("active");
+		});
+	</script>
+	<script type="text/javascript">
+		//给按钮signin绑定单击事件，实现签到功能
+		$("#signin").click(function() {
+			//alert("signin ok");
+			//发送ajax请求，完成签到.并通过回调函数显示结果
+			$.ajax({
+				url : "signin",
+				type : "post",
+				dataType : "text",
+				success : function(data) {
+					//显示签到结果
+					if (data == 0) {
+						//$("#result").html("签到失败");
+						alert("签到失败");
+					} else if (data == 1) {
+						//$("#result").html("签到成功");
+						alert("签到成功");
+					} else {
+						//$("#result").html("已经签到，无需重复签到");
+						alert("已经签到，无需重复签到");
+					}
+				}
+			});
+		});
+
+		//给按钮signout绑定单击事件，实现签退
+		$("#signout").click(function() {
+			//alert("signout ok?");
+			$.ajax({
+				url : "signout",
+				type : "post",
+				dataType : "text",
+				success : function(data) {
+					//显示签退结果
+					if (data == 0) {
+						//$("#result").html("签退失败");
+						alert("签退失败");
+					} else if (data == 1) {
+						//$("#result").html("签退成功");
+						alert("签退成功");
+					} else {
+						//$("#result").html("已经退到，无需重复签退");
+						alert("已经签退，无需重复签退");
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>

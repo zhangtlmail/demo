@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.DutyDao">
+	<resultMap type="com.example.demo.pojo.Duty" id="DutyMap">
+		<id property="dtID" column="dtId" />
+		<result column="dateTime" property="dtDate" />
+		<result column="signInTime" property="signinTime" />
+		<result column="signOutTime" property="signoutTime" />
+		<association property="user"
+			javaType="com.example.demo.pojo.User">
+			<id property="id" column="id" />
+			<result column="name" property="name" />
+		</association>
+	</resultMap>
+	<select id="findAllDuty" resultMap="DutyMap">
+	SELECT dtId,id,name,dateTime,signInTime,signOutTime FROM tb_duty,tb_user WHERE tb_duty.userId=tb_user.id
+	</select>
+	<insert id="saveDutyIn"
+		parameterType="com.example.demo.pojo.Duty">
+		INSERT INTO
+		tb_duty(userId,dateTime,signInTime)
+		VALUE
+		(#{userId},#{dtDate},#{signinTime})
+	</insert>
+	<update id="saveDutyOut">
+		UPDATE tb_duty SET signOutTime=#{signoutTime} WHERE
+		userId=#{userId} AND dateTime=#{today}
+	</update>
+	<select id="findDuty" resultType="com.example.demo.pojo.Duty">
+		SELECT dtId FROM tb_duty WHERE
+		userId=#{userId} AND dateTime=#{today}
+	</select>
+	<select id="findDutyOut" resultType="String">
+		SELECT signOutTime FROM
+		tb_duty WHERE
+		userId=#{userId}
+	</select>
+</mapper>
