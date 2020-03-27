@@ -1,6 +1,6 @@
 package com.example.demo.interceptor;
 
-import com.example.demo.interceptor.LoginInterceptor;
+//import com.example.demo.interceptor.LoginInterceptor;
 
 //import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,8 +10,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 //import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@Configuration
-public class LoginConfig implements WebMvcConfigurer {
+//@Configuration
+public class LoginConfig /*implements WebMvcConfigurer*/ {
 	/**
 	 * 默认访问的是首页
 	 *
@@ -29,11 +29,11 @@ public class LoginConfig implements WebMvcConfigurer {
 	 *
 	 * @param registry
 	 */
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	//@Override
+	//public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		// registry.addResourceHandler("/static/").addResourceLocations("classpath:/static/");
-		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-	}
+	//	registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+	//}
 
 	/**
 	 * 将国际化添加到容器中
@@ -50,12 +50,12 @@ public class LoginConfig implements WebMvcConfigurer {
 	 *
 	 * @param registry
 	 */
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/", "/login.html",
-				"/user/login", "/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg", "/**/*.gif",
-				"/**/fonts/*", "/**/*.svg","/loginForm","/checkUser","/register");
-	}
+	//@Override
+	//public void addInterceptors(InterceptorRegistry registry) {
+	//	registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/", "/login.html",
+	//			"/user/login", "/**.css", "*.js", "*.png", "*.jpg", "*.jpeg", "*.gif",
+	//			"/**/fonts/*", "/**/*.svg","/loginForm","/checkUser","/register");
+	//}
 	
 	/*
 	 * @Override public void addInterceptors(InterceptorRegistry registry) {

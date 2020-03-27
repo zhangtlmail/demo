@@ -1,5 +1,5 @@
 spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://localhost:3306/demodb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://localhost:3306/demodb666?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
 spring.datasource.username=root
 spring.datasource.password=123456
 spring.jpa.showSql=true
@@ -18,3 +18,10 @@ mybatis.typeAliasesPackage=com.example.demo.pojo
 mybatis.mapperLocations=classpath:mapper/*.xml
 
 logging.level.com.example.demo.dao=debug
+
+spring.flyway.enabled=true
+spring.flyway.encoding=flyway
+spring.flyway.locations=classpath:db/migration
+#***true
+spring.flyway.clean-disabled=false
+spring.flyway.table=flyway_schema_history

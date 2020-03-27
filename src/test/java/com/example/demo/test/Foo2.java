@@ -1,4 +1,4 @@
-package com.example.demo.pojo;
+package com.example.demo.test;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;

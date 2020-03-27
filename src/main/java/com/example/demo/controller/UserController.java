@@ -27,7 +27,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.pojo.User;
 import com.example.demo.service.UserService;
-import com.example.demo.util.MSG;
 
 //实现 Restful HTTP 服务
 @Controller

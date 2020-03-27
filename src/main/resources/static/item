@@ -1,0 +1,45 @@
+<div class="col-sm-10">
+			<!--使用时只需此标签，class固定,id自己定义-->
+		        <div class="nth-tabs" id="main-tabs">
+		        </div>
+			
+				<div class="col-sm-7">
+					<div>
+						<h3>感谢您使用SSM企业人事管理系统</h3>
+						<p>提示:</p>
+						<p>您现在使用的是本小组开发的套用于企业人事管理的非专业系统 .如有问题请指教!</p>
+						<p>五大功能完美整合，一站通使用方式， 功能强大， 操作简单
+							,后台操作易如反掌,只需会开机，会使用鼠标，能认字,就能当HR !</p>
+						<p>赶快加入吧!</p>
+					</div>
+				</div>
+				<!-- 中部右侧右边 -->
+				<div class="col-sm-5">
+					<div>
+						<h4 style="color: red;">
+							<b>签到/签退</b>
+						</h4>
+						<p>经营理念:全心全意为品牌注入更多价值</p>
+						<p>服务理念:给我分机会还您百分满意</p>
+						<p>团队理念:热情专注高效负责</p>
+						<p>发展理念:致力与成为本土最有价值的广告服务商</p>
+						<p>人才观:以为本公司文化:以思缘为荣以思缘为家</p>
+						&nbsp;&nbsp;&nbsp; &nbsp;
+						<button class="btn btn-danger btn-lg" id="signin">签到</button>
+						<button class="btn btn-danger btn-lg" id="signout">签退</button>
+						<!-- <p id="result"></p> -->
+					</div>
+					<div>
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<h3 class="panel-title">公司公告</h3>
+							</div>
+							<div class="panel-body">
+								<ul class="list-group">
+									<li class="list-group-item">***</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
